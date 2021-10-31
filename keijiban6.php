@@ -1,16 +1,19 @@
+<!DOCTYPE html>
 <html>
-<head><title>PHP TEST</title></head>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <title>PHP TEST</title>
+</head>
 <body>
-
-<p>掲示板</p>
-
-<form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
-<input type="text" name="personal_name"><br><br>
-<textarea name="contents" rows="8" cols="40">
-</textarea><br><br>
-<input type="submit" name="btn1" value="投稿する">
-</form>
-
+<h3 class="alert alert-primary">掲示板</h3>
+<div id="base" class="m-4">
+    <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
+        <input type="text" name="personal_name"><br><br>
+        <textarea name="contents" rows="8" cols="40">
+        </textarea><br><br>
+        <input type="submit" name="btn1" value="投稿する">
+    </form>
+</div>
 <?php
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -32,7 +35,8 @@ function readData(){
             }
 
             flock($fp, LOCK_UN);
-        }else{
+        }
+        else {
             print('ファイルロックに失敗しました');
         }
     }
@@ -61,7 +65,8 @@ function writeData(){
             }
 
             flock($fp, LOCK_UN);
-        }else{
+        }
+        else {
             print('ファイルロックに失敗しました');
         }
     }
