@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net;
 using System;
 
-namespace cs_1028
+namespace subject-1028-cs-post
 {
     class Program
     {
