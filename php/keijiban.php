@@ -48,11 +48,14 @@ function writeData(){
     $personal_name = $_POST['personal_name'];
     $contents = $_POST['contents'];
     $contents = nl2br($contents);
+    $now = date("Y/m/d H:i:s");
 
-    $data = "<hr>\r\n";
-    $data = $data."<p>投稿者:".$personal_name."</p>\r\n";
-    $data = $data."<p>内容:</p>\r\n";
-    $data = $data."<p>".$contents."</p>\r\n";
+    $data = <<< DATA
+<hr>
+<p>投稿者:{$personal_name} : {$now}</p>
+<p>内容:</p>
+<p>{$contents}</p>
+DATA;
 
     $keijban_file = 'keijiban.txt';
 
