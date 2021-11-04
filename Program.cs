@@ -10,7 +10,7 @@ namespace subject_1028_cs_post
     {
         static void Main(string[] args)
         {
-            string url = "http://localhost/php/keijiban.php";
+            string url = "http://localhost/php-test/keijiban.php";
             string encoding = "utf-8";
             Dictionary<string, string> param =
                 new Dictionary<string, string>()
